@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="jquery.lightbox.min.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,8 +43,20 @@
 <h3>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h3>
 
-<p><a href="https://raw.github.com/duncanmcdougall/Responsive-Lightbox/master/demo/images/sample_a.jpg">
-   <img src="https://raw.github.com/duncanmcdougall/Responsive-Lightbox/master/demo/images/sample_a_thumb.jpg" alt="Venice" width="100" height="100"></a></p>
+<div class="gallery">
+  <a href="images/sample_a.jpg">
+   <img src="images/sample_a_thumb.jpg" alt="Venice">
+  </a>
+  <a href="images/sample_b.jpg">
+   <img src="images/sample_b_thumb.jpg" alt="London">
+  </a>
+  <a href="images/sample_c.jpg">
+   <img src="images/sample_c_thumb.jpg" alt="Brussels">
+  </a>
+  <a href="images/sample_d.jpg">
+   <img src="images/sample_d_thumb.jpg" alt="London Olympics">
+  </a>
+ </div>
 
 <h3>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
@@ -61,7 +74,7 @@
          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"photo2.jpg"</span><span class="nt">&gt;</span>Image 2<span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
 
-      <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
       <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"lightbox.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
       <span class="nt">&lt;script&gt;</span>
@@ -98,5 +111,12 @@
         
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="javascripts/jquery.lightbox.min.js"></script>
+    <script>
+      $(function() {
+        $('.gallery a').lightbox(); 
+      });
+    </script>
   </body>
 </html>
