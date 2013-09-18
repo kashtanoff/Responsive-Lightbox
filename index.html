@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Responsive Lightbox : Lightweight, image only responsive, jQuery lightbox" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Responsive Lightbox</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Responsive Lightbox by duncanmcdougall</title>
   </head>
 
   <body>
+    <div id="container">
+      <div class="inner">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/duncanmcdougall/Responsive-Lightbox">View on GitHub</a>
-
-          <h1 id="project_title">Responsive Lightbox</h1>
-          <h2 id="project_tagline">Lightweight, image only responsive, jQuery lightbox</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/duncanmcdougall/Responsive-Lightbox/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/duncanmcdougall/Responsive-Lightbox/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+        <header>
+          <h1>Responsive Lightbox</h1>
+          <h2>Lightweight, image only responsive, jQuery lightbox</h2>
         </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>I am pleased to present my image-only, responsive, super lightweight, jQuery lightbox plugin.</p>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/duncanmcdougall/Responsive-Lightbox/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/duncanmcdougall/Responsive-Lightbox/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/duncanmcdougall/Responsive-Lightbox" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>I am pleased to present my image-only, responsive, super lightweight, jQuery lightbox plugin.</p>
 
 <p>I was recently tasked with finding a lightbox plugin for high traffic ecommerce site I was building from scratch. Given the impact page weight can have on conversion, bounce rates and a bunch of other delicate analytic metrics, it was essential every piece of JavaScript selected for the site was as lightweight as possible, along with being responsive.</p>
 
@@ -51,40 +51,52 @@
 <p>Firstly drop in jQuery 1.4 or above.</p>
 
 <div class="highlight highlight-html"><pre><span class="nt">&lt;html&gt;</span>
-    <span class="nt">&lt;head&gt;</span>
-        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"jquery.lightbox.css"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/head&gt;</span>
-    <span class="nt">&lt;body&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+      <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"lightbox.css"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+      <span class="c">&lt;!-- Link to the image --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gallery"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"photo1.jpg"</span><span class="nt">&gt;</span>Image 1<span class="nt">&lt;/a&gt;</span>
+         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"photo2.jpg"</span><span class="nt">&gt;</span>Image 2<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
 
-    <span class="c">&lt;!-- Link to the image --&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"myimage.jpg"</span> <span class="na">rel=</span><span class="s">"lightbox"</span><span class="nt">&gt;</span>Click me<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"lightbox.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.lightbox.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="nt">&lt;script&gt;</span>
+         <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span>
+         <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'.gallery a'</span><span class="p">).</span><span class="nx">lightbox</span><span class="p">();</span> 
 
-    <span class="nt">&lt;script&gt;</span>
-        <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="nx">$</span><span class="p">(</span><span class="s1">'[rel="lightbox"]'</span><span class="p">).</span><span class="nx">lightbox</span><span class="p">();</span>
-        <span class="p">});</span>
-    <span class="nt">&lt;/script&gt;</span>
-    <span class="nt">&lt;/body&gt;</span>
+            <span class="c1">// If you want seperate galleries on the same page</span>
+            <span class="c1">// just specify different class names. </span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'.gallery-2 a'</span><span class="p">).</span><span class="nx">lightbox</span><span class="p">();</span>
+         <span class="p">});</span>
+      <span class="nt">&lt;/script&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </pre></div>
 
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
 
-      </section>
+<ul>
+<li>margin - int - default 50. Minimum margin around the image</li>
+<li>nav - bool - default true. enable navigation</li>
+<li>blur - bool - default true. Blur other content when open using css filter</li>
+<li>minSize - int - default 0. Min window width or height to open lightbox. Below threshold will open image in a new tab.</li>
+</ul><div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'.gallery'</span><span class="p">).</span><span class="nx">lightbox</span><span class="p">({</span> <span class="nx">margin</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">nav</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">blur</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">minSize</span><span class="o">:</span> <span class="mi">480</span> <span class="p">});</span>
+</pre></div>
+        </section>
+
+        <footer>
+          Responsive Lightbox is maintained by <a href="https://github.com/duncanmcdougall">duncanmcdougall</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Responsive Lightbox maintained by <a href="https://github.com/duncanmcdougall">duncanmcdougall</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
   </body>
 </html>
