@@ -1,0 +1,20 @@
+{
+    "name": "kashtanoff/Responsive-Lightbox",
+    "description": "Fast Responsive Lightbox.",
+    "keywords": ["yii2", "Lightbox"],
+    "type": "jquery-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Lashtanov",
+            "email": "ivankashtanoff@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+    }  
+}
